@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Weavers>
+  <Bix.Mixers>
+    <BixMixersConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:Bix:Mixers:Fody:Core" xmlns:bmfim="urn:Bix:Mixers:Fody:InterfaceMixins">
+      <MixCommandConfig xsi:type="bmfim:InterfaceMixinConfigType" xmlns="">
+        <InterfaceMap Interface="MyMixinDefinitions.IHelloWorld, MyMixinDefinitions" Mixin="MyMixins.HelloMixin, MyMixins" />
+      </MixCommandConfig>
+    </BixMixersConfig>
+  </Bix.Mixers>
+</Weavers>
