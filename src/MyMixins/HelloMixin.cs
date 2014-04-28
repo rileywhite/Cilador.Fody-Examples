@@ -25,7 +25,6 @@
 // For more information, please refer to <http://unlicense.org/>
 /*********************************************************************/
 
-using Bix.Mixers.Fody.ILCloning;
 using MyMixinDefinitions;
 using System;
 using System.Collections.Generic;
@@ -37,9 +36,6 @@ namespace MyMixins
 {
     public class HelloMixin : IHelloWorld
     {
-        [Skip]
-        public HelloMixin() { }
-
         public string Hello()
         {
             return "Hello World";
