@@ -1,5 +1,3 @@
-_(Note: Bix.Mixers.Fody is currently in the process of its initial release. Until the release is complete and the NuGet package is available, this example will not be usable.)_
-
 ##Welcome to the Bix.Mixers.Fody-Examples project!
 
 The purpose of this project is to provide examples showing

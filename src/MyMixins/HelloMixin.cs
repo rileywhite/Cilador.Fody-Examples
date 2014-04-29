@@ -34,6 +34,14 @@ using System.Threading.Tasks;
 
 namespace MyMixins
 {
+    /// <summary>
+    /// This is the mixin implementation. The FodyWeavers.xml
+    /// configuration specifies that this is the type that should
+    /// be used to implement the IHelloWorld mixin definition.
+    /// 
+    /// All code within this type will be copied into the mixin target
+    /// with the exception of constructors and field initializations.
+    /// </summary>
     public class HelloMixin : IHelloWorld
     {
         public string Hello()

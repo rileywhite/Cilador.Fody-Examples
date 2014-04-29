@@ -35,6 +35,14 @@ using System.Threading.Tasks;
 
 namespace MyApplicationLibrary
 {
+    /// <summary>
+    /// This is the mixin target type. Fody will invoke the Bix.Mixers addin
+    /// which will then find this attribute and plug in the code from the
+    /// mixin definition type defined in MyMixinDefinitions.dll.
+    /// 
+    /// Try examining the compiled and processed assembly with
+    /// dotPeek (http://www.jetbrains.com/decompiler/) or something similar.
+    /// </summary>
     [InterfaceMixin(typeof(IHelloWorld))]
     public class Target
     {

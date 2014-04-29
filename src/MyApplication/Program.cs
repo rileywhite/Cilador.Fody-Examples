@@ -34,10 +34,20 @@ using System.Threading.Tasks;
 
 namespace MyApplication
 {
+    /// <summary>
+    /// Runs the example program
+    /// </summary>
     internal class Program
     {
+        /// <summary>
+        /// Entry method
+        /// </summary>
+        /// <param name="args">Command line arguments</param>
         public static void Main(string[] args)
         {
+            // Visual Studio won't show the Hello() method through intellisense,
+            // and it may provide a visual cue that the method name is invalid
+            // (e.g. red squiggly underline). It will compile, though :-)
             Console.WriteLine(new Target().Hello());
         }
     }

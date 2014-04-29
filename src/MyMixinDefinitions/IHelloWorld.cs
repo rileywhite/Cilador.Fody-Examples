@@ -33,8 +33,16 @@ using System.Threading.Tasks;
 
 namespace MyMixinDefinitions
 {
+    /// <summary>
+    /// This is the mixin definition interface. This inteface
+    /// will be added to the target type in MyApplicationLibrary.dll.
+    /// </summary>
     public interface IHelloWorld
     {
+        /// <summary>
+        /// When implemented, this should return a simple hello message.
+        /// </summary>
+        /// <returns>Simple hello message</returns>
         string Hello();
     }
 }
