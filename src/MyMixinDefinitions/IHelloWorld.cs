@@ -44,5 +44,11 @@ namespace MyMixinDefinitions
         /// </summary>
         /// <returns>Simple hello message</returns>
         string Hello();
+
+        /// <summary>
+        /// When implemented, this should return a simple hello again message.
+        /// </summary>
+        /// <returns>Simple hello message</returns>
+        string HelloAgain();
     }
 }

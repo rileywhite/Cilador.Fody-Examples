@@ -45,10 +45,25 @@ namespace MyApplication
         /// <param name="args">Command line arguments</param>
         public static void Main(string[] args)
         {
+            var target = new Target();
+
             // Visual Studio won't show the Hello() method through intellisense,
             // and it may provide a visual cue that the method name is invalid
             // (e.g. red squiggly underline). It will compile, though :-)
-            Console.WriteLine(new Target().Hello());
+            Console.WriteLine(target.Hello());
+
+            // HelloAgain() is explicitly implemented in the mixin definition.
+            // Because of this, it cannot be directly invoked.
+            // If you uncomment this line, then Visual Studio intellisense will
+            // complain identically to the above call to Hello(). This time,
+            // though, it is correct in believing that the method is unavailable.
+            //     (uncomment following line and try to compile to see this)
+            // Console.WriteLine(target.HelloAgain());
+
+            // Casting your target to the interface makes intellisense easier
+            // to work with. It also allows you to call interface-scoped members.
+            var targetAsInterface = target as MyMixinDefinitions.IHelloWorld;
+            Console.WriteLine(targetAsInterface.HelloAgain());
         }
     }
 }

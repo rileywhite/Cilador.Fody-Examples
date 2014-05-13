@@ -48,5 +48,10 @@ namespace MyMixins
         {
             return "Hello World";
         }
+
+        string IHelloWorld.HelloAgain()
+        {
+            return "Hello, again, this time with an explicit implementation.";
+        }
     }
 }
