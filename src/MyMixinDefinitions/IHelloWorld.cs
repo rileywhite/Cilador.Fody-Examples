@@ -50,5 +50,13 @@ namespace MyMixinDefinitions
         /// </summary>
         /// <returns>Simple hello message</returns>
         string HelloAgain();
+
+        /// <summary>
+        /// When implemented, this should echo back the callers input as a string.
+        /// </summary>
+        /// <typeparam name="T">Type of input.</typeparam>
+        /// <param name="input">Input to echo as a string.</param>
+        /// <returns>Input as a string.</returns>
+        string HelloEcho<T>(T input);
     }
 }

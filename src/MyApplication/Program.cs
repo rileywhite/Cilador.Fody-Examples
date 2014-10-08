@@ -64,6 +64,10 @@ namespace MyApplication
             // to work with. It also allows you to call interface-scoped members.
             var targetAsInterface = target as MyMixinDefinitions.IHelloWorld;
             Console.WriteLine(targetAsInterface.HelloAgain());
+
+            // Calling a generic method works as you'd expect.
+            Console.WriteLine(target.HelloEcho("Echo this string, and then echo a number in the next line."));
+            Console.WriteLine(target.HelloEcho(42));
         }
     }
 }

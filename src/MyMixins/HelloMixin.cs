@@ -53,5 +53,10 @@ namespace MyMixins
         {
             return "Hello, again, this time with an explicit implementation.";
         }
+
+        public string HelloEcho<T>(T input)
+        {
+            return input == null ? "Null" : input.ToString();
+        }
     }
 }
