@@ -57,7 +57,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FodyWeavers - Copy.xml" />
     <Content Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
