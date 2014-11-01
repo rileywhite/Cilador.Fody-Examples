@@ -45,7 +45,7 @@ namespace MyApplication
         /// <param name="args">Command line arguments</param>
         public static void Main(string[] args)
         {
-            var target = new Target();
+            var target = new HelloWorldTarget();
 
             // Visual Studio won't show the Hello() method through intellisense,
             // and it may provide a visual cue that the method name is invalid
@@ -68,6 +68,25 @@ namespace MyApplication
             // Calling a generic method works as you'd expect.
             Console.WriteLine(target.HelloEcho("Echo this string, and then echo a number in the next line."));
             Console.WriteLine(target.HelloEcho(42));
+
+            // now let's look at how constructor calls work
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // start with a call to the parameterless constructor
+            // notice that the static type initializer gets called at some point (no guarantee when, just that it's before the type is used)
+            // notice that the implementation mixin code has been cloned into the parameterless constructor
+            var parameterless = new FunWithConstructorsTarget();
+
+            // now make a call to the constructor that takes a bool 
+            // again, the mixin implementation constructor code was copied here
+            var boolParameter = new FunWithConstructorsTarget(false);
+
+            // last, make a call to the constructor that takes a number
+            // this constructor chains to the bool constructor
+            // notice that the mixin implementation constructor code only runs as part of the bool constructor
+            var intParamater = new FunWithConstructorsTarget(34);
         }
     }
 }

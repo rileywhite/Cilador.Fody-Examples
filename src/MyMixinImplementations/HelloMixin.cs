@@ -25,11 +25,38 @@
 // For more information, please refer to <http://unlicense.org/>
 /*********************************************************************/
 
-using System.Reflection;
+using MyMixinDefinitions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MyApplication")]
-[assembly: AssemblyCopyright("")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyVersion("0.1.7.0")]
-[assembly: AssemblyFileVersion("0.1.7.0")]
+namespace MyMixinImplementations
+{
+    /// <summary>
+    /// This is the mixin implementation. The FodyWeavers.xml
+    /// configuration specifies that this is the type that should
+    /// be used to implement the IHelloWorld mixin definition.
+    /// 
+    /// All code within this type will be copied into the mixin target
+    /// with the exception of constructors and field initializations.
+    /// </summary>
+    public class HelloMixin : IHelloWorld
+    {
+        public string Hello()
+        {
+            return "Hello World";
+        }
+
+        string IHelloWorld.HelloAgain()
+        {
+            return "Hello, again, this time with an explicit implementation.";
+        }
+
+        public string HelloEcho<T>(T input)
+        {
+            return input == null ? "Null" : input.ToString();
+        }
+    }
+}

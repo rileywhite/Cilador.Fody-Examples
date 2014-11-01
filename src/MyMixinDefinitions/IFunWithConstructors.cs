@@ -25,11 +25,11 @@
 // For more information, please refer to <http://unlicense.org/>
 /*********************************************************************/
 
-using System.Reflection;
+using System;
 
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MyApplication")]
-[assembly: AssemblyCopyright("")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyVersion("0.1.7.0")]
-[assembly: AssemblyFileVersion("0.1.7.0")]
+namespace MyMixinDefinitions
+{
+    public interface IFunWithConstructors
+    {
+    }
+}

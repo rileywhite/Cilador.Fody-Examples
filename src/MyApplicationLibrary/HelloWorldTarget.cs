@@ -25,11 +25,26 @@
 // For more information, please refer to <http://unlicense.org/>
 /*********************************************************************/
 
-using System.Reflection;
+using Bix.Mixers.Fody.InterfaceMixins;
+using MyMixinDefinitions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MyApplication")]
-[assembly: AssemblyCopyright("")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyVersion("0.1.7.0")]
-[assembly: AssemblyFileVersion("0.1.7.0")]
+namespace MyApplicationLibrary
+{
+    /// <summary>
+    /// This is the mixin target type. Fody will invoke the Bix.Mixers addin
+    /// which will then find this attribute and plug in the code from the
+    /// mixin definition type defined in MyMixinDefinitions.dll.
+    /// 
+    /// Try examining the compiled and processed assembly with
+    /// dotPeek (http://www.jetbrains.com/decompiler/) or something similar.
+    /// </summary>
+    [InterfaceMixin(typeof(IHelloWorld))]
+    public class HelloWorldTarget
+    {
+    }
+}

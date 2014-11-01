@@ -7,8 +7,8 @@
     <ProjectGuid>{56CB879B-CEB9-4616-85CD-60CF57230552}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyMixins</RootNamespace>
-    <AssemblyName>MyMixins</AssemblyName>
+    <RootNamespace>MyMixinImplementations</RootNamespace>
+    <AssemblyName>MyMixinImplementations</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>6e100ffb</NuGetPackageImportStamp>
@@ -43,6 +43,7 @@
     <Compile Include="..\CommonAssemblyInfo.cs">
       <Link>CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="FunWithConstructorsMixin.cs" />
     <Compile Include="HelloMixin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

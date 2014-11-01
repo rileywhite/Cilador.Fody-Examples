@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Web
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApplicationLibrary", "MyApplicationLibrary\MyApplicationLibrary.csproj", "{FCE6067A-EEB5-4753-AA44-E0601BB9A7B4}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApplicationLibrary", "MyA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMixinDefinitions", "MyMixinDefinitions\MyMixinDefinitions.csproj", "{3111CCB0-67C0-494D-BD86-3B541A950EF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMixins", "MyMixins\MyMixins.csproj", "{56CB879B-CEB9-4616-85CD-60CF57230552}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMixinImplementations", "MyMixinImplementations\MyMixinImplementations.csproj", "{56CB879B-CEB9-4616-85CD-60CF57230552}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApplication", "MyApplication\MyApplication.csproj", "{71ADAD51-EF6C-4005-9B11-1E0D9C5B4C11}"
 EndProject

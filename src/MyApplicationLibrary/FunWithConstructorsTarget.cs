@@ -28,23 +28,39 @@
 using Bix.Mixers.Fody.InterfaceMixins;
 using MyMixinDefinitions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyApplicationLibrary
 {
     /// <summary>
-    /// This is the mixin target type. Fody will invoke the Bix.Mixers addin
-    /// which will then find this attribute and plug in the code from the
-    /// mixin definition type defined in MyMixinDefinitions.dll.
-    /// 
-    /// Try examining the compiled and processed assembly with
-    /// dotPeek (http://www.jetbrains.com/decompiler/) or something similar.
+    /// This type defines 3 constructors, 1 of which forwards to one of the others.
     /// </summary>
-    [InterfaceMixin(typeof(IHelloWorld))]
-    public class Target
+    [InterfaceMixin(typeof(IFunWithConstructors))]
+    public class FunWithConstructorsTarget
     {
+        public FunWithConstructorsTarget()
+        {
+            Console.WriteLine("This is the constructor that takes no arguments");
+        }
+
+        public FunWithConstructorsTarget(bool isCalledFromAnotherConstructor)
+        {
+            Console.WriteLine("This is the constructor that takes a single Boolean.");
+            if (isCalledFromAnotherConstructor)
+            {
+                Console.WriteLine("The constructor was called from another constructor. How many times did the mixin constructor logic run?");
+            }
+            else
+            {
+                Console.WriteLine("The constructor was called directly.");
+            }
+        }
+
+        public FunWithConstructorsTarget(int aNumberToOutput)
+            : this(true)
+        {
+            Console.WriteLine(
+                "This is the constructor that takes a single integer. {0} was sent to it. It also calls through to the Boolean constructor",
+                aNumberToOutput);
+        }
     }
 }

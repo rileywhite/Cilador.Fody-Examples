@@ -27,36 +27,19 @@
 
 using MyMixinDefinitions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MyMixins
+namespace MyMixinImplementations
 {
-    /// <summary>
-    /// This is the mixin implementation. The FodyWeavers.xml
-    /// configuration specifies that this is the type that should
-    /// be used to implement the IHelloWorld mixin definition.
-    /// 
-    /// All code within this type will be copied into the mixin target
-    /// with the exception of constructors and field initializations.
-    /// </summary>
-    public class HelloMixin : IHelloWorld
+    public class FunWithConstructorsMixin : IFunWithConstructors
     {
-        public string Hello()
+        static FunWithConstructorsMixin()
         {
-            return "Hello World";
+            Console.WriteLine("Here is a line of code in the mixin implementation static type initializer. See how it runs as part of the target static type initializer?");
         }
 
-        string IHelloWorld.HelloAgain()
+        public FunWithConstructorsMixin()
         {
-            return "Hello, again, this time with an explicit implementation.";
-        }
-
-        public string HelloEcho<T>(T input)
-        {
-            return input == null ? "Null" : input.ToString();
+            Console.WriteLine("Here is a line of code in the mixin implementation constructor. See how it runs as part of the target constructors? Does this run in every constructor? What about those constructors that call into other constructors instead of the base constructor?");
         }
     }
 }
