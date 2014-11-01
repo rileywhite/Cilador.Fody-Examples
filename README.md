@@ -2,12 +2,8 @@
 
 The purpose of this project is to provide examples showing
 how to use [Bix.Mixers.Fody](http://github.com/rileywhite/Bix.Mixers.Fody).
-It may be a bit sparse now, but that's by design. After all,
+It may be a bit sparse, but that's by design. After all,
 the purpose of an example is to be easy to follow, right?
-
-But seriously, I do recognize that one example does not
-necessitate a plural name. I expect this'll grow, and I don't
-want to have to change the name if and when it does :-)
 
 Please note that, unlike Bix.Mixers.Fody which is available
 under the commercial friendly Apache License, this project
