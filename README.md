@@ -1,11 +1,11 @@
-##Welcome to the Bix.Mixers.Fody-Examples project!
+##Welcome to the Cilador.Fody-Examples project!
 
 The purpose of this project is to provide examples showing
-how to use [Bix.Mixers.Fody](http://github.com/rileywhite/Bix.Mixers.Fody).
+how to use [Cilador.Fody](http://github.com/rileywhite/Cilador).
 It may be a bit sparse, but that's by design. After all,
 the purpose of an example is to be easy to follow, right?
 
-Please note that, unlike Bix.Mixers.Fody which is available
+Please note that, unlike Cilador.Fody which is available
 under the commercial friendly Apache License, this project
 is ["unlicensed"](http://unlicense.org/); it is intended to be
 public domain. Feel free to use it as a starting point for any
