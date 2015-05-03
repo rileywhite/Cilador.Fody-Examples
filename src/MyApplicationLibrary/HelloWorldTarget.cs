@@ -25,18 +25,14 @@
 // For more information, please refer to <http://unlicense.org/>
 /*********************************************************************/
 
-using Bix.Mixers.Fody.InterfaceMixins;
+using Cilador.Fody.DtoProjector;
+using Cilador.Fody.InterfaceMixins;
 using MyMixinDefinitions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyApplicationLibrary
 {
     /// <summary>
-    /// This is the mixin target type. Fody will invoke the Bix.Mixers addin
+    /// This is the mixin target type. Fody will invoke the Cilador.Fody addin
     /// which will then find this attribute and plug in the code from the
     /// mixin definition type defined in MyMixinDefinitions.dll.
     /// 

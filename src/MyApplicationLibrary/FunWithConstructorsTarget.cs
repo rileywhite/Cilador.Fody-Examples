@@ -25,7 +25,7 @@
 // For more information, please refer to <http://unlicense.org/>
 /*********************************************************************/
 
-using Bix.Mixers.Fody.InterfaceMixins;
+using Cilador.Fody.InterfaceMixins;
 using MyMixinDefinitions;
 using System;
 
